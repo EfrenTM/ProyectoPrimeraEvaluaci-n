@@ -1,0 +1,19 @@
+{
+  "name": "dicember",
+  "version": "1.0.0",
+  "description": "Primera version del servidor",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "nodemon index.js" 
+  },
+  "author": "Efren",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.6",
+    "pg": "^7.6.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.41.2",
+    "sqlite3": "^4.0.4"
+  }
+}
