@@ -1,37 +1,33 @@
 'use strict'
 
 module.exports = (sequelize, Sequelize) => {
-    const ProductTemplate = sequelize.define('product_template', {
+    const resUsers= sequelize.define('res_users', {
         id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        name: {
+        // name: {
+        //     type: Sequelize.STRING,
+        //     required: true
+        // },
+        login: {
             type: Sequelize.STRING,
             required: true
         },
-        warranty: {
-            type: Sequelize.FLOAT,
-            required: false
-        },
-        list_price: {
-            type: Sequelize.INTEGER,
-            required: false
-        },
-        color: {
-            type: Sequelize.INTEGER,
-            required: false
-        },
-        uom_id: {
-            type: Sequelize.INTEGER,
+        password: {
+            type: Sequelize.STRING,
             required: true
         },
-        company_id: {
+        write_uid: {
             type: Sequelize.INTEGER,
             required: false
         },
-        description: {
+        create_uid: {
+            type: Sequelize.INTEGER,
+            required: false
+        },
+        password_crypt: {
             type: Sequelize.STRING,
             required: false
         }
@@ -54,10 +50,8 @@ module.exports = (sequelize, Sequelize) => {
             freezeTableName: true,
 
             // define the table's name
-            tableName: 'product_template'
+            tableName: 'res_users'
         });
 
-    return ProductTemplate;
+    return resUsers;
 }
-
-

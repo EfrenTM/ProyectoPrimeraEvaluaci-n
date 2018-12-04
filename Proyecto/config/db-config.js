@@ -18,5 +18,6 @@ db.sequelize = sequelize;
 
 //Models/tables
 db.productTemplates = require('../models/product-template')(sequelize, Sequelize);
- 
+db.resCompany = require('../models/res-company')(sequelize, Sequelize);
+db.resUsers = require('../models/res-users')(sequelize, Sequelize);
 module.exports = db;
