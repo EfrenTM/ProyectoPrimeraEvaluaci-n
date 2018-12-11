@@ -1,0 +1,84 @@
+<!--implementar en el menu toggle-->
+<ion-header class="segmentColor">
+  <!--imports libraries-->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!-- header select settings-->
+  <ion-toolbar no-border-top>
+    <ion-segment class="headerColor" [(ngModel)]="settingsAdmin">
+      <ion-segment-button value="users">
+        <h1 class="letters-button-header">Usuarios</h1>
+      </ion-segment-button>
+      <ion-segment-button value="product">
+        <h1 class="letters-button-header">Productos</h1>
+      </ion-segment-button>
+      <ion-segment-button value="company">
+        <h1 class="letters-button-header">Empresas</h1>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="ripe-malinka-gradient-body">
+  <!-- Case users-->
+  <div [ngSwitch]="settingsAdmin">
+    <ion-list *ngSwitchCase="'users'">
+      <ion-item-sliding *ngFor="let user of users">
+        <ion-item>
+          <h2 class="id" name="idUser">{{user.id}}</h2>
+          <h2>{{user.login}}</h2>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="primary">
+            <ion-icon name="refresh-circle"></ion-icon>
+            Act
+          </button>
+          <button ion-button color="danger">
+            <ion-icon name="trash" (click)="InformationDeleteUser(user)"></ion-icon>
+            Del
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    <!-- Case company-->
+    <ion-list *ngSwitchCase="'product'">
+      <ion-item-sliding *ngFor="let product of products">
+        <ion-item>
+          <h2>{{product.name}}</h2>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="primary">
+            <ion-icon name="refresh-circle"></ion-icon>
+            Act
+          </button>
+          <button ion-button color="danger">
+            <ion-icon name="trash"></ion-icon>
+            Del
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    <!-- Case company-->
+    <ion-list *ngSwitchCase="'company'">
+      <ion-item-sliding *ngFor="let company of companys">
+        <ion-item>
+          <h2>{{company.name}}</h2>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="primary">
+            <ion-icon name="refresh-circle"></ion-icon>
+            Act
+          </button>
+          <button ion-button color="danger">
+            <ion-icon name="trash"></ion-icon>
+            Del
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
+  </div>
+</ion-content>

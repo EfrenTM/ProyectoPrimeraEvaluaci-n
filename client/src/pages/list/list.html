@@ -1,0 +1,39 @@
+<!-- Body items -->
+<ion-content class= "body-color" > 
+<ion-grid >
+  <ion-row class=" ">
+    <!--image of product-->
+    <ion-row id="products" class="item col-xs-4 col-lg-4 row view-group thumbnail card img-event product-color">
+      <img class="group list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt="" />
+      <!--items  of product-->
+      <div class="caption card-body">
+        <h4 class="group card-title inner list-group-item-heading">Nombre del producto</h4>
+        <p class="group inner list-group-item-text">Descripción del producto</p>
+        <h4 class="group card-title inner list-group-item-heading">Emrpesa</h4>
+        <!-- column price -->
+        <ion-row class="row">
+          <div class="col-xs-12 col-md-6">
+            <p class="lead">Precio</p>
+          </div>
+        </ion-row>
+      </div>
+    </ion-row>
+  </ion-row>
+</ion-grid>
+</ion-content>
+<!--menu modal  -->
+<ion-menu [content]="content">
+  <ion-header >
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class= "product-color">
+    <ion-list>  
+      <button ion-item (click)="onClikSettings()">Configuracion</button>
+      <button ion-item (click)="openPage(homePage)">Cerrar sesión</button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #content [root]="rootPage"></ion-nav>
