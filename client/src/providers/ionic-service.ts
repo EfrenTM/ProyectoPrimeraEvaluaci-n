@@ -33,12 +33,6 @@ export class IonicService {
     }
     
     removeOneUser(idDelete :number){
-        let options = {
-            headers:{
-                'Content-Type': 'appliction/x-www-form-urlencoded'
-            }
-        };
-
-        return this.http.delete(this.API + '/res_users/delete' + idDelete,options);
+        return this.http.delete(this.API + '/res_users/delete' + idDelete);
     }
  }

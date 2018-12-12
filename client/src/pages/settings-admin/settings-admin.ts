@@ -11,55 +11,62 @@ export class SettingsAdminPage {
   users: Array<any>;
   products: Array<any>;
   companys: Array<any>;
-  idDelete: number;
   // user= {u }
   constructor(public navCtrl: NavController, public ionicService: IonicService, public navParams: NavParams) {
 
   }
 
-  ionViewDidLoad(){
+  ionViewDidLoad() {
     console.log("llego al view");
     this.getUsers();
-    this.getProducts();
-    this.getCompany();
+    // this.getProducts();
+    // this.getCompany();
   }
 
-  getUsers(){
-    this.ionicService.findAllUsers().subscribe(usersArray =>{
+  getUsers() {
+    this.ionicService.findAllUsers().subscribe(usersArray => {
       this.users = usersArray;
     })
   }
-  getProducts(){
-    this.ionicService. findAllProducts().subscribe(productArray =>{
+
+  showUsers(){
+    for(var i = 0; i < this.users.length; i++){
+      console.log(this.users[i].id);
+    }
+  }
+
+  getProducts() {
+    this.ionicService.findAllProducts().subscribe(productArray => {
       this.products = productArray;
     })
   }
-  getCompany(){
-    this.ionicService. findAllCompany().subscribe(comapnysArray =>{
+  getCompany() {
+    this.ionicService.findAllCompany().subscribe(comapnysArray => {
       this.companys = comapnysArray;
     })
   }
-  
-  InformationDeleteUser(user:User){
+
+  informationDeleteUser(idUser) {
     console.log("llego al infotmation");
-     
-    this.idDelete= user.id;
-      
-      this.deleteOne(this.idDelete);
+    console.log("no llega o qué" + idUser);
+    
+
+    this.deleteOne(idUser);
   }
 
-  deleteOne(idDelete){
+  deleteOne(idDelete) {
     console.log("llego al delete");
-     this.ionicService.removeOneUser(idDelete).subscribe(() =>{
+    this.ionicService.removeOneUser(idDelete).subscribe(() => {
       console.log("funcionó");
-     }, error =>{
-      console.log(error);
-     })
+    }, error => {
+      console.log("efrenecito" + error);
+    })
   }
 
-  
+
 
 }
-class User {
-    id: number
-}
+
+// class User {
+//   id: number
+// }

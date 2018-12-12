@@ -4,6 +4,7 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
   <!-- header select settings-->
   <ion-toolbar no-border-top>
     <ion-segment class="headerColor" [(ngModel)]="settingsAdmin">
@@ -29,7 +30,7 @@
       <ion-item-sliding *ngFor="let user of users">
         <ion-item>
           <h2 class="id" name="idUser">{{user.id}}</h2>
-          <h2>{{user.login}}</h2>
+          <h2>{{user.login}} hola</h2>
         </ion-item>
         <ion-item-options side="right">
           <button ion-button color="primary">
@@ -37,7 +38,7 @@
             Act
           </button>
           <button ion-button color="danger">
-            <ion-icon name="trash" (click)="InformationDeleteUser(user)"></ion-icon>
+            <ion-icon name="trash" (click)="informationDeleteUser(user.id)"></ion-icon>
             Del
           </button>
         </ion-item-options>
@@ -79,6 +80,6 @@
         </ion-item-options>
       </ion-item-sliding>
     </ion-list>
-
   </div>
+
 </ion-content>
