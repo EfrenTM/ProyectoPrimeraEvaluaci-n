@@ -2,7 +2,11 @@
 // variables principales 
 var express = require('express');
 var app = express();
+
 var api = express.Router();
+
+var cors = require("cors");
+app.use(cors());
 
 var bodyParser = require('body-parser');
 app.use(

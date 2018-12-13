@@ -27,8 +27,10 @@ const create = (req, res) => {
 };
 
 //Añadir variables automaticas con el lado del cliente.
-const expunge =  (req, res) =>{
-    resUsers.destroy({where: req.body}).then(() =>{
+const expunge =  (req, res) => {
+    console.log("expunge");
+    let idDelete = req.params.id;
+    resUsers.destroy({where: { id : idDelete }}).then(() =>{
         res.status(200).send("Delete finished")
     }).catch(err => {
         console.log(err);

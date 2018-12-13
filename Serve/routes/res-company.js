@@ -7,5 +7,5 @@ module.exports = function (api) {
     api.get("/res_company", resCompanyController.findAll);
     api.put("/res_company/update", resCompanyController.update);
     api.post("/res_company/create", resCompanyController.create);
-    api.delete("/res_company/delete", resCompanyController.expunge);
+    api.delete("/res_company/delete/:id", resCompanyController.expunge);
 }

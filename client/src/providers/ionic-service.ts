@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+// import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
+// import { resolveDefinition } from '@angular/core/src/view/util';
 
 @Injectable()
 export class IonicService {
+    //serve
     public API = 'http://localhost:40000/shop';
-
+    //sqlite
+    // private db: SQLiteObject;
 
     constructor(public http: HttpClient) {
+        // storage: SQLite
         console.log("Welcome to ionic-service");
+
     }
 
     findAllUsers(): Observable<any> {
@@ -33,6 +39,23 @@ export class IonicService {
     }
     
     removeOneUser(idDelete :number){
-        return this.http.delete(this.API + '/res_users/delete' + idDelete);
+        return this.http.delete(this.API + '/res_users/delete/' + idDelete);
     }
+
+    removeOneProduct(idDelete :number){
+        return this.http.delete(this.API + '/product_template/delete/' + idDelete);
+    }
+
+    removeOneCompany(idDelete :number){
+        return this.http.delete(this.API + '/res_company/delete/' + idDelete);
+    }
+    //SQlite
+    // CreateImage(ruta: string){
+    //     return new Promise((res, req) =>{
+    //         let sql =  "INSERT INTO images(ruta) values (?)";
+    //         this.db.executeSql(sql, [ruta]).then((data) =>{
+    //            resolveDefinition(data);
+    //         });
+    //     });
+    // }
  }

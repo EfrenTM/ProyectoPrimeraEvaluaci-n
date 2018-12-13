@@ -7,7 +7,7 @@ module.exports = function (api) {
     api.get("/product_template", productTemplateController.findAll);
     api.put("/product_template/update", productTemplateController.update);
     api.post("/product_template/create", productTemplateController.create);
-    api.delete("/product_template/delete", productTemplateController.expunge);
+    api.delete("/product_template/delete/:id", productTemplateController.expunge);
 
 }
 
