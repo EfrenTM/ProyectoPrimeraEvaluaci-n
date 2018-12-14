@@ -12,6 +12,7 @@ import { SettingsAdminPage } from '../pages/settings-admin/settings-admin';
 import { SignUpPage } from '../pages/sign-up/sign-up';
 import { IonicService } from '../providers/ionic-service';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateProductPage } from '../pages/create-products/create-products';
 
 
 
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     ListPage,
     LoginPage,
     SettingsAdminPage,
+    CreateProductPage,
     SignUpPage
     
   ],
@@ -39,6 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
     ListPage,
     LoginPage,
     SettingsAdminPage,
+    CreateProductPage,
     SignUpPage
     
   ],

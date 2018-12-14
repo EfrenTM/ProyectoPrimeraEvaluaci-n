@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { IonicService } from '../../providers/ionic-service';
-
+import { CreateProductPage } from '../../pages/create-products/create-products';
 @Component({
   selector: 'page-settings-admin',
   templateUrl: 'settings-admin.html'
@@ -51,6 +51,7 @@ export class SettingsAdminPage {
       console.log(this.users[i].id);
     }
   }
+  
   //product
   //Get
   getProducts() {
@@ -71,6 +72,11 @@ export class SettingsAdminPage {
     }, error => {
       console.log("efrenecito" + error);
     })
+  }
+  //Create Settings
+  CreateProduct(){
+    console.log("llego al botton de los cojones"); 
+    this.navCtrl.push(CreateProductPage);
   }
   //Company
   //GET

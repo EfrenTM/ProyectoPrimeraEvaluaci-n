@@ -5,12 +5,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ListPage } from '../pages/list/list';
 import { SettingsAdminPage } from '../pages/settings-admin/settings-admin';
 import { HomePage } from '../pages/home/home';
+import { CreateProductPage } from '../pages/create-products/create-products';
+
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SettingsAdminPage;
+  rootPage:any = CreateProductPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menuCtrl: MenuController) {
     platform.ready().then(() => {
