@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
+import {SQLite} from '@ionic-native/sqlite';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -13,7 +13,7 @@ import { SignUpPage } from '../pages/sign-up/sign-up';
 import { IonicService } from '../providers/ionic-service';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateProductPage } from '../pages/create-products/create-products';
-
+import { UpdateUsersPage } from '../pages/update-users/update-users';
 
 
 
@@ -26,6 +26,7 @@ import { CreateProductPage } from '../pages/create-products/create-products';
     LoginPage,
     SettingsAdminPage,
     CreateProductPage,
+    UpdateUsersPage,
     SignUpPage
     
   ],
@@ -42,12 +43,14 @@ import { CreateProductPage } from '../pages/create-products/create-products';
     LoginPage,
     SettingsAdminPage,
     CreateProductPage,
+    UpdateUsersPage,
     SignUpPage
     
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    SQLite,
     IonicService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

@@ -10,7 +10,7 @@ const findAll = (req, res) => {
 }
 //Añadir variables automaticas con el lado del cliente.
 const update = (req, res) => {
-    ProductTemplate.update({ name: "UpdateCrud" }, { where: { id: 1 } }).then(() => {
+    ProductTemplate.update({ name: "UpdateCrud" }, { where: { id: 9 } }).then(() => {
         res.status(200).send("Update finished")
     });
 }
@@ -20,10 +20,9 @@ const create = (req, res) => {
         res.status(200).send("Craate finished")
     }).catch(err => {
         console.log(err);
-        res.status(500).json({ msg: "error", details: err });
+        res.status(500).json({msg: "error", details: err});
     });
-
-}
+};
 //Añadir variables automaticas con el lado del cliente.
 const expunge =  (req, res) => {
     console.log("expunge");

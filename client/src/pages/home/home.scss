@@ -82,7 +82,7 @@ page-home {
             rgba(189, 63, 50, 0.5) /* #bd3f32 */
           ),
           /* bottom image */
-          url('https://cdn.stocksnap.io/img-thumbs/960w/VPYPAS4FVT.jpg') no-repeat left top;
+           url(../../assets/imgs/home1.png) no-repeat left top;
         background-size: cover;  
           z-index: 0; 
       }
@@ -114,7 +114,7 @@ page-home {
             rgba(108, 91, 123, 0.8), /* #6c5b7b */
             rgba(192, 108, 123, 0.8) /* #c06c7b */
           ),
-           url('https://cdn.stocksnap.io/img-thumbs/960w/Y01VDYAX63.jpg') no-repeat left top;
+           url(../../assets/imgs/home2.jpg) no-repeat left top;
         background-size: cover;  
           z-index: 0; /* bottom layout */
       }

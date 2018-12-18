@@ -1,26 +1,34 @@
 <!-- Body items -->
 <ion-content class= "body-color" > 
 <ion-grid >
-  <ion-row class=" ">
+  <ion-row class=" " *ngFor="let product of products">
     <!--image of product-->
     <ion-row id="products" class="item col-xs-4 col-lg-4 row view-group thumbnail card img-event product-color">
-      <img class="group list-group-image img-fluid" src="../../assets/imgs/logo.png" alt="" />
+      <img class="group list-group-image img-fluid" src="../../assets/imgs/ropa3.png" alt="" />
       <!--items  of product-->
       <div class="caption card-body">
-        <h4 class="group card-title inner list-group-item-heading">Nombre del producto</h4>
-        <p class="group inner list-group-item-text">Descripción del producto</p>
-        <h4 class="group card-title inner list-group-item-heading">Emrpesa</h4>
+        <h4 class="group card-title inner list-group-item-heading">{{product.name}}</h4>
+        <p class="group inner list-group-item-text">{{product.description}}</p>
+        <h4 class="group card-title inner list-group-item-heading">compañia</h4>
         <!-- column price -->
         <ion-row class="row">
           <div class="col-xs-12 col-md-6">
-            <p class="lead">Precio</p>
+            <h4 class="lead">Precio:{{product.list_price}}</h4>
           </div>
         </ion-row>
       </div>
     </ion-row>
   </ion-row>
+ 
 </ion-grid>
+
+<!-- <button ion-item (click)="GetAllImages()">mostrar</button> -->
+
+
 </ion-content>
+
+<i class="scroll fa fa-angle-double-right"></i>
+
 <!--menu modal  -->
 <ion-menu [content]="content">
   <ion-header >
@@ -31,7 +39,7 @@
   <ion-content class= "product-color">
     <ion-list>  
       <button ion-item (click)="onClikSettings()">Configuracion</button>
-      <button ion-item (click)="openPage(homePage)">Cerrar sesión</button>
+      <button ion-item (click)="goHome()">Cerrar sesión</button>
     </ion-list>
   </ion-content>
 </ion-menu>

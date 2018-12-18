@@ -10,4 +10,5 @@ import { CreateProductPage } from './create-products';
     IonicPageModule.forChild(CreateProductPage),
   ],
 })
-export class CreateProductPageModule {}
+export class CreateProductPageModule {
+}

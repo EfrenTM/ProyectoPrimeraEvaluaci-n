@@ -36,7 +36,7 @@
           <h2>{{user.login}}</h2>
         </ion-item>
         <ion-item-options side="right">
-          <button ion-button color="primary">
+          <button ion-button color="primary" (click)="updateUser(user)">
             <ion-icon name="refresh-circle"></ion-icon>
           </button>
           <button ion-button color="danger" (click)="informationDeleteUser(user.id)">
@@ -65,9 +65,11 @@
 
          <!-- add  button -->
          <ion-fab right bottom>
-            <button ion-fab color="light" (click)="CreateProduct()">
-              <ion-icon name="add"></ion-icon>
-            </button>
+            <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon> </button>
+            <ion-fab-list side="left">
+                <button ion-fab (click)=" CreateProduct()"><ion-icon name="add" ></ion-icon></button>
+                <button ion-fab (click)="goList()" ><ion-icon name="arrow-round-back"  ></ion-icon></button>
+              </ion-fab-list>
           </ion-fab>
           
     </ion-list>

@@ -11,7 +11,7 @@ const findAll = (req, res) => {
 
 //Añadir variables automaticas con el lado del cliente.
 const update = (req, res) => {
-    resUsers.update({ password: "admin" }, { where: { id: 1 } }).then(() => {
+    resUsers.update({ password: "admin" }, { where: { id: 16 } }).then(() => {
         res.status(200).send("Update finished")
     });
 };

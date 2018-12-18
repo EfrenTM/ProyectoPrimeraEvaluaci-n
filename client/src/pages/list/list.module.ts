@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ListPage } from './list';
-import { SettingsAdminPage } from '../settings-admin/settings-admin';
 import { NavController } from 'ionic-angular';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +20,4 @@ export class ListPageModule {
 
   }
 
-  onClikSettings(){
-     this.navCtrl.push(SettingsAdminPage);
-  }
 }

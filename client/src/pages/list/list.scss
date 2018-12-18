@@ -1,4 +1,13 @@
 page-list {
+
+.scroll {
+        position: absolute;
+        top: 50%;
+        left: 2%;
+        transform:translate(-50%,-50%);
+        color: rgb(7, 1, 1);
+        font-size: 200%;
+      }
     .product-color {
         background-image:
         linear-gradient(

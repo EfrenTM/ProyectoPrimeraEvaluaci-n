@@ -10,7 +10,7 @@ const findAll = (req, res) => {
 }
 //Añadir variables automaticas con el lado del cliente.
 const update = (req, res) => {
-    resCompany.update({ name: "UpdateCompany" }, { where: { id: 1 } }).then(() => {
+    resCompany.update({ name: "UpdateCompany" }, { where: { id: 5 } }).then(() => {
         res.status(200).send("Update finished")
     });
 }

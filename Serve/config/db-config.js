@@ -1,6 +1,7 @@
 'use strict'
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('postgres://postgres:admin@192.168.201.85:5432/BDproyect');
+ const sequelize = new Sequelize('postgres://postgres:admin@192.168.201.85:5432/BDproyect');
+//const sequelize = new Sequelize('postgres://postgres:admin@192.168.1.9:5432/BDproyect');
 
 
 sequelize.authenticate()
